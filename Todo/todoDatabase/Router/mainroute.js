@@ -1,0 +1,11 @@
+const express=require('express')
+const userfunction = require('../Controller/addTodo')
+const findupdate = require('../Controller/editTodo')
+const tododelete = require('../Controller/todoDelete')
+const todoList = require('../Controller/findall')
+const router=express.Router() 
+router.route('/add').post(userfunction)
+router.route('/edit/:id').put(findupdate)
+router.route('/delete/:id').delete(tododelete)
+router.route('/get').get(todoList)
+module.exports=router

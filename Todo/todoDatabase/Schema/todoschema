@@ -1,0 +1,8 @@
+const mongoose=require('mongoose')
+const todoschema=mongoose.Schema({
+    Activityname:{type:String},
+   
+   
+})
+const Todo=mongoose.model('Todo',todoschema)
+module.exports=Todo
